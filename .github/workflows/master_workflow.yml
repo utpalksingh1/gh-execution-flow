@@ -1,4 +1,4 @@
-name: use reuse workflow
+name: use reuse workflow with output
 on:
   push:
     branches:
@@ -77,7 +77,7 @@ jobs:
       - name: Show deploy output
         run: |
           echo "deploy result is ${{ needs.deploy.outputs.deploy-info-result }}"
-          echo "from job result is ${{ needs.deploy.jobs.deploy.outputs.my-result }}"
+          # echo "from job result is ${{ needs.deploy.jobs.deploy.outputs.my-result }}"
   report:
     needs: [lint, test, build, deploy]
     runs-on: ubuntu-latest
