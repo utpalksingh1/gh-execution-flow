@@ -20,7 +20,7 @@ jobs:
         with:
           role-to-assume: ${{ secrets.AWS_IAM_ROLE }}
           aws-region: ap-south-1
-      - name: Run AWS Command test 
+      - name: Run AWS Command test -tst
         run: aws sts get-caller-identity
 
 
